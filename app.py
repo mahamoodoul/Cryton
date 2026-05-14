@@ -14,7 +14,7 @@ app.config['MAIL_PORT']     = int(os.getenv('MAIL_PORT', 587))
 app.config['MAIL_USE_TLS']  = True
 app.config['MAIL_USERNAME'] = os.getenv('MAIL_USERNAME', '')
 app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD', '')
-app.config['MAIL_DEFAULT_SENDER'] = os.getenv('MAIL_USERNAME', 'noreply@cryton.no')
+app.config['MAIL_DEFAULT_SENDER'] = os.getenv('MAIL_FROM', 'onboarding@resend.dev')
 app.config['SECRET_KEY']    = os.getenv('SECRET_KEY', 'dev-secret-change-in-production')
 
 mail = Mail(app)
