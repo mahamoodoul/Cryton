@@ -105,29 +105,29 @@ textarea { resize: vertical; min-height: 120px; }
 @keyframes spin { to { transform: rotate(360deg); } }
 
 /* ── Section helpers ───────────────────────────────────────────── */
-.section { padding: 5rem 0; }
-.section-header { margin-bottom: 2.5rem; }
+.section { padding: 6rem 0; }
+.section-header { margin-bottom: 3rem; }
 .section-label {
   font-family: var(--mono);
   font-size: 11px;
   letter-spacing: 0.18em;
   color: var(--accent);
   text-transform: uppercase;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
 }
 .section-title {
-  font-size: clamp(24px, 4vw, 36px);
+  font-size: clamp(28px, 4vw, 42px);
   font-weight: 800;
   color: #fff;
   letter-spacing: -1px;
   line-height: 1.1;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.65rem;
 }
 .section-sub {
-  font-size: 15px;
+  font-size: 16px;
   color: var(--text-2);
-  max-width: 520px;
-  line-height: 1.75;
+  max-width: 560px;
+  line-height: 1.8;
 }
 .accent { color: var(--accent); }
 
@@ -292,11 +292,11 @@ h1 {
 }
 
 .hero-sub {
-  font-size: 16px;
+  font-size: 17px;
   color: var(--text-2);
-  max-width: 540px;
-  line-height: 1.75;
-  margin-bottom: 1.75rem;
+  max-width: 560px;
+  line-height: 1.8;
+  margin-bottom: 2rem;
 }
 
 .hero-tags {
@@ -367,22 +367,22 @@ h1 {
   grid-template-columns: repeat(3, 1fr);
 }
 .stat {
-  padding: 1.75rem 2rem;
+  padding: 2rem 2.5rem;
   border-right: 0.5px solid var(--border);
 }
 .stat:last-child { border-right: none; }
 .stat-num {
-  font-size: clamp(22px, 3vw, 32px);
+  font-size: clamp(26px, 3vw, 36px);
   font-weight: 800;
   color: #fff;
   letter-spacing: -0.5px;
   line-height: 1;
-  margin-bottom: 4px;
+  margin-bottom: 5px;
 }
 .stat-label {
   font-family: var(--mono);
   font-size: 12px;
-  color: var(--text-3);
+  color: var(--text-2);
   letter-spacing: 0.06em;
 }
 
@@ -391,36 +391,20 @@ h1 {
    ══════════════════════════════════════════════════════════════ */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1px;
   background: var(--border);
   border: 0.5px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
 }
-.service-illus {
-  width: 100%;
-  height: 108px;
-  margin-bottom: 1.25rem;
-  background: var(--bg-3);
-  border: 0.5px solid var(--border);
-  border-radius: var(--radius-sm);
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.service-illus img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  padding: 0.6rem 0.75rem;
-}
 
 .service-card {
   background: var(--bg);
-  padding: 1.5rem 1.5rem 1.75rem;
+  padding: 2rem 2rem 2.25rem;
   transition: background 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
 }
 .service-card:hover {
   background: var(--bg-2);
@@ -428,30 +412,43 @@ h1 {
 }
 
 .service-icon {
-  width: 38px;
-  height: 38px;
-  border-radius: 8px;
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
   background: var(--accent-lo);
   border: 0.5px solid var(--accent-bd);
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--accent);
-  font-size: 18px;
-  margin-bottom: 1rem;
+  font-size: 22px;
+  margin-bottom: 1.25rem;
+  flex-shrink: 0;
 }
 .service-name {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   color: #fff;
-  margin-bottom: 6px;
-  letter-spacing: -0.2px;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.3px;
 }
 .service-desc {
-  font-size: 14px;
+  font-size: 14.5px;
   color: var(--text-2);
-  line-height: 1.7;
+  line-height: 1.75;
+  flex: 1;
 }
+.service-link {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+  margin-top: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  transition: opacity 0.2s;
+}
+.service-card:hover .service-link { opacity: 0.8; }
 
 /* ══════════════════════════════════════════════════════════════
    PROCESS
@@ -467,7 +464,7 @@ h1 {
   gap: 0;
 }
 .step {
-  padding: 2rem 1.5rem;
+  padding: 2.5rem 2rem;
   border-right: 0.5px solid var(--border);
 }
 .step:last-child { border-right: none; }
@@ -476,18 +473,18 @@ h1 {
   font-size: 11px;
   color: rgba(37,99,235,0.65);
   letter-spacing: 0.1em;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
 }
 .step-title {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
   color: #fff;
-  margin-bottom: 6px;
+  margin-bottom: 0.5rem;
 }
 .step-desc {
   font-size: 14px;
   color: var(--text-2);
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
 /* ══════════════════════════════════════════════════════════════
@@ -545,24 +542,24 @@ h1 {
 }
 
 .portfolio-body {
-  padding: 1.5rem 1.75rem 1.75rem;
+  padding: 1.75rem 2rem 2rem;
   display: flex;
   flex-direction: column;
   flex: 1;
 }
 .portfolio-name {
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 700;
   color: #fff;
-  letter-spacing: -0.3px;
+  letter-spacing: -0.4px;
   line-height: 1.3;
-  margin-bottom: 0.55rem;
+  margin-bottom: 0.65rem;
 }
 .portfolio-desc {
-  font-size: 14px;
+  font-size: 14.5px;
   color: var(--text-2);
-  line-height: 1.7;
-  margin-bottom: 1.1rem;
+  line-height: 1.75;
+  margin-bottom: 1.25rem;
   flex: 1;
 }
 .portfolio-link {
@@ -597,13 +594,13 @@ h1 {
   max-width: 100%;
 }
 .cta-text h2 {
-  font-size: clamp(20px, 3vw, 26px);
+  font-size: clamp(22px, 3vw, 30px);
   font-weight: 800;
   color: #fff;
   letter-spacing: -0.5px;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
-.cta-text p { font-size: 13px; color: var(--text-2); }
+.cta-text p { font-size: 14px; color: var(--text-2); }
 
 /* ══════════════════════════════════════════════════════════════
    PAGE HERO (inner pages)

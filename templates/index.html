@@ -22,12 +22,12 @@
       <p class="hero-sub">{{ t.hero.sub }}</p>
 
       <div class="hero-tags" aria-label="Key services">
-        <span class="tag">Cloud Engineering</span>
-        <span class="tag">Data Solutions</span>
         <span class="tag">Cybersecurity</span>
-        <span class="tag">Automation</span>
-        <span class="tag">AWS</span>
-        <span class="tag">Power Platform</span>
+        <span class="tag">Cloud & DevOps</span>
+        <span class="tag">Web Development</span>
+        <span class="tag">IT Consulting</span>
+        <span class="tag">Data Engineering</span>
+        <span class="tag">Oslo, Norway</span>
       </div>
 
       <div class="hero-btns">
@@ -36,21 +36,22 @@
       </div>
     </div>
 
-    <!-- Decorative terminal card -->
+    <!-- Consulting engagement card -->
     <div class="hero-card" aria-hidden="true">
       <div class="hero-card-bar">
         <span></span><span></span><span></span>
-        <span class="hero-card-title">cryton — deploy.sh</span>
+        <span class="hero-card-title">cryton — engagement.md</span>
       </div>
       <div class="hero-card-body">
-        <p><span class="c-blue">$</span> terraform apply <span class="c-accent">--auto-approve</span></p>
+        <p><span class="c-blue">CLIENT</span>  Nordic Enterprise AS</p>
+        <p><span class="c-blue">SCOPE </span>   Security + Cloud</p>
         <p>&nbsp;</p>
-        <p><span class="c-green">✓</span> Cloud infrastructure deployed</p>
-        <p><span class="c-green">✓</span> Security policies enforced</p>
-        <p><span class="c-green">✓</span> Data pipelines running</p>
-        <p><span class="c-green">✓</span> Monitoring active</p>
+        <p><span class="c-green">✓</span> Security audit complete</p>
+        <p><span class="c-green">✓</span> Zero-trust architecture live</p>
+        <p><span class="c-green">✓</span> Cloud infrastructure hardened</p>
+        <p><span class="c-green">✓</span> Team trained & documented</p>
         <p>&nbsp;</p>
-        <p><span class="c-blue">→</span> 0 alerts · all systems healthy</p>
+        <p><span class="c-blue">→</span> Delivered on time & budget</p>
         <p class="blink"><span class="c-accent">▌</span></p>
       </div>
     </div>
@@ -81,15 +82,12 @@
     <div class="services-grid">
       {% for item in t.services.list %}
       <article class="service-card">
-        <div class="service-illus" aria-hidden="true">
-          <img src="{{ url_for('static', filename='images/services/' + item.img) }}"
-               alt="" width="200" height="120" loading="lazy" />
-        </div>
         <div class="service-icon" aria-hidden="true">
           <i class="ti {{ item.icon }}"></i>
         </div>
         <h3 class="service-name">{{ item.name }}</h3>
         <p class="service-desc">{{ item.desc }}</p>
+        <a href="{{ url_for('contact', lang=lang) }}" class="service-link">Enquire →</a>
       </article>
       {% endfor %}
     </div>
