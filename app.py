@@ -535,8 +535,20 @@ def api_contact():
         mail.send(msg)
         return jsonify({'ok': True})
     except Exception as e:
-        app.logger.error(f'Mail error: {e}')
+        app.logger.error(f'Mail error [{type(e).__name__}]: {e}')
         return jsonify({'ok': False, 'error': 'Failed to send message. Please try again.'}), 500
+
+@app.route('/api/health')
+def health():
+    username = app.config.get('MAIL_USERNAME', '')
+    return jsonify({
+        'mail_server':    app.config.get('MAIL_SERVER'),
+        'mail_port':      app.config.get('MAIL_PORT'),
+        'mail_username':  username[:6] + '***' if username else 'NOT SET',
+        'mail_password':  'SET' if app.config.get('MAIL_PASSWORD') else 'NOT SET',
+        'recipient':      'SET' if os.getenv('CONTACT_RECIPIENT') else 'NOT SET',
+        'secret_key':     'SET' if app.config.get('SECRET_KEY') != 'dev-secret-change-in-production' else 'DEFAULT (change this)',
+    })
 
 @app.route('/api/lang/<code>')
 def set_lang(code):
