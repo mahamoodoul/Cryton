@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" fill="none">
+  <rect width="400" height="240" fill="rgba(12,21,37,0.6)"/>
+
+  <!-- ── App nav bar ── -->
+  <rect x="0" y="0" width="400" height="36" fill="rgba(37,99,235,0.15)"
+        stroke="#2563EB" stroke-width="0.5" opacity="0.8"/>
+  <text x="18" y="23" font-family="'DM Mono',monospace" font-size="9"
+        fill="#fff" letter-spacing="-0.3">Cryton HR Portal</text>
+  <text x="170" y="23" font-family="monospace" font-size="7.5" fill="#93B4F7" opacity="0.55">Dashboard</text>
+  <text x="240" y="23" font-family="monospace" font-size="7.5" fill="#60a5fa">Requests</text>
+  <text x="306" y="23" font-family="monospace" font-size="7.5" fill="#93B4F7" opacity="0.55">Settings</text>
+  <!-- Avatar -->
+  <circle cx="378" cy="18" r="11" fill="rgba(37,99,235,0.4)" stroke="#2563EB" stroke-width="1"/>
+  <text x="378" y="22" text-anchor="middle" font-family="monospace" font-size="8" fill="#93B4F7">JD</text>
+
+  <!-- ── Page heading + action button ── -->
+  <text x="18" y="58" font-family="'DM Mono',monospace" font-size="12"
+        fill="#fff" font-weight="bold" letter-spacing="-0.3">Leave Requests</text>
+  <rect x="300" y="44" width="86" height="22" rx="3" fill="#2563EB"/>
+  <text x="343" y="59" text-anchor="middle"
+        font-family="monospace" font-size="7.5" fill="#fff">+ New Request</text>
+
+  <!-- ── Table header ── -->
+  <rect x="14" y="70" width="372" height="20" rx="2"
+        fill="rgba(37,99,235,0.10)" stroke="#2563EB" stroke-width="0.5" opacity="0.7"/>
+  <text x="26"  y="83" font-family="monospace" font-size="7" fill="#93B4F7" opacity="0.55">EMPLOYEE</text>
+  <text x="126" y="83" font-family="monospace" font-size="7" fill="#93B4F7" opacity="0.55">TYPE</text>
+  <text x="210" y="83" font-family="monospace" font-size="7" fill="#93B4F7" opacity="0.55">DATES</text>
+  <text x="292" y="83" font-family="monospace" font-size="7" fill="#93B4F7" opacity="0.55">STATUS</text>
+  <text x="356" y="83" font-family="monospace" font-size="7" fill="#93B4F7" opacity="0.55">ACTION</text>
+
+  <!-- ── Row 1 (approved) ── -->
+  <rect x="14" y="90" width="372" height="30" fill="rgba(37,99,235,0.03)"/>
+  <text x="26"  y="109" font-family="monospace" font-size="8.5" fill="#E8EDF5">Anna Berg</text>
+  <text x="126" y="109" font-family="monospace" font-size="7.5" fill="#93B4F7">Annual Leave</text>
+  <text x="210" y="109" font-family="monospace" font-size="7.5" fill="#93B4F7">Jan 15 – 19</text>
+  <rect x="286" y="97" width="54" height="16" rx="8"
+        fill="rgba(74,222,128,0.14)" stroke="#4ade80" stroke-width="0.75"/>
+  <text x="313" y="108" text-anchor="middle" font-family="monospace" font-size="6.5" fill="#4ade80">Approved</text>
+
+  <!-- ── Row 2 (pending) ── -->
+  <rect x="14" y="120" width="372" height="30" fill="rgba(37,99,235,0.055)"/>
+  <text x="26"  y="139" font-family="monospace" font-size="8.5" fill="#E8EDF5">Lars Moen</text>
+  <text x="126" y="139" font-family="monospace" font-size="7.5" fill="#93B4F7">Sick Leave</text>
+  <text x="210" y="139" font-family="monospace" font-size="7.5" fill="#93B4F7">Jan 20 – 21</text>
+  <rect x="284" y="127" width="60" height="16" rx="8"
+        fill="rgba(251,191,36,0.12)" stroke="#fbbf24" stroke-width="0.75"/>
+  <text x="314" y="138" text-anchor="middle" font-family="monospace" font-size="6.5" fill="#fbbf24">Pending</text>
+  <rect x="352" y="127" width="28" height="16" rx="3"
+        fill="rgba(37,99,235,0.35)" stroke="#2563EB" stroke-width="0.75"/>
+  <text x="366" y="138" text-anchor="middle" font-family="monospace" font-size="8" fill="#93B4F7">→</text>
+
+  <!-- ── Row 3 (approved) ── -->
+  <rect x="14" y="150" width="372" height="30" fill="rgba(37,99,235,0.03)"/>
+  <text x="26"  y="169" font-family="monospace" font-size="8.5" fill="#E8EDF5">Kari Holm</text>
+  <text x="126" y="169" font-family="monospace" font-size="7.5" fill="#93B4F7">Remote Work</text>
+  <text x="210" y="169" font-family="monospace" font-size="7.5" fill="#93B4F7">Jan 22 – 26</text>
+  <rect x="286" y="157" width="54" height="16" rx="8"
+        fill="rgba(74,222,128,0.14)" stroke="#4ade80" stroke-width="0.75"/>
+  <text x="313" y="168" text-anchor="middle" font-family="monospace" font-size="6.5" fill="#4ade80">Approved</text>
+
+  <!-- ── Row 4 (pending) ── -->
+  <rect x="14" y="180" width="372" height="30" fill="rgba(37,99,235,0.055)"/>
+  <text x="26"  y="199" font-family="monospace" font-size="8.5" fill="#E8EDF5">Erik Dahl</text>
+  <text x="126" y="199" font-family="monospace" font-size="7.5" fill="#93B4F7">Annual Leave</text>
+  <text x="210" y="199" font-family="monospace" font-size="7.5" fill="#93B4F7">Feb 3 – 7</text>
+  <rect x="284" y="187" width="60" height="16" rx="8"
+        fill="rgba(251,191,36,0.12)" stroke="#fbbf24" stroke-width="0.75"/>
+  <text x="314" y="198" text-anchor="middle" font-family="monospace" font-size="6.5" fill="#fbbf24">Pending</text>
+  <rect x="352" y="187" width="28" height="16" rx="3"
+        fill="rgba(37,99,235,0.35)" stroke="#2563EB" stroke-width="0.75"/>
+  <text x="366" y="198" text-anchor="middle" font-family="monospace" font-size="8" fill="#93B4F7">→</text>
+
+  <!-- Row dividers -->
+  <line x1="14" y1="90"  x2="386" y2="90"  stroke="#2563EB" stroke-width="0.5" opacity="0.18"/>
+  <line x1="14" y1="120" x2="386" y2="120" stroke="#2563EB" stroke-width="0.5" opacity="0.18"/>
+  <line x1="14" y1="150" x2="386" y2="150" stroke="#2563EB" stroke-width="0.5" opacity="0.18"/>
+  <line x1="14" y1="180" x2="386" y2="180" stroke="#2563EB" stroke-width="0.5" opacity="0.18"/>
+
+  <!-- ── Footer status bar ── -->
+  <rect x="14" y="218" width="372" height="16" rx="2"
+        fill="rgba(37,99,235,0.06)" stroke="#2563EB" stroke-width="0.5" opacity="0.4"/>
+  <text x="200" y="229" text-anchor="middle"
+        font-family="monospace" font-size="6.5" fill="#93B4F7" opacity="0.6">
+    4 requests  ·  2 pending approval  ·  Power Apps + Power Automate
+  </text>
+</svg>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120" fill="none">
+  <!-- Subtle background grid -->
+  <line x1="0" y1="30" x2="200" y2="30" stroke="#2563EB" stroke-width="0.5" opacity="0.05"/>
+  <line x1="0" y1="60" x2="200" y2="60" stroke="#2563EB" stroke-width="0.5" opacity="0.05"/>
+  <line x1="0" y1="90" x2="200" y2="90" stroke="#2563EB" stroke-width="0.5" opacity="0.05"/>
+
+  <!-- Cloud silhouette -->
+  <path d="M54 82
+           C54 82 46 80 46 72
+           C46 64 54 60 63 62
+           C63 50 73 42 87 44
+           C91 36 104 34 113 40
+           C119 32 133 33 140 43
+           C149 39 159 46 159 56
+           C167 58 168 66 166 73
+           C164 80 156 84 148 84
+           L62 84
+           C58 84 54 83 54 82 Z"
+        stroke="#2563EB" stroke-width="1.5"
+        fill="rgba(37,99,235,0.09)" stroke-linejoin="round"/>
+
+  <!-- Nodes inside cloud connected by lines -->
+  <circle cx="84"  cy="66" r="3" fill="#2563EB" opacity="0.75"/>
+  <circle cx="106" cy="60" r="3" fill="#2563EB" opacity="0.75"/>
+  <circle cx="128" cy="66" r="3" fill="#2563EB" opacity="0.75"/>
+  <line x1="84"  y1="66" x2="106" y2="60" stroke="#2563EB" stroke-width="1" opacity="0.3"/>
+  <line x1="106" y1="60" x2="128" y2="66" stroke="#2563EB" stroke-width="1" opacity="0.3"/>
+
+  <!-- Upload arrows (dashed) -->
+  <line x1="78"  y1="108" x2="78"  y2="90" stroke="#2563EB" stroke-width="1.5" stroke-dasharray="3,2" opacity="0.65"/>
+  <polyline points="74,96 78,90 82,96" stroke="#2563EB" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.65"/>
+
+  <line x1="106" y1="108" x2="106" y2="90" stroke="#2563EB" stroke-width="1.5" stroke-dasharray="3,2" opacity="0.65"/>
+  <polyline points="102,96 106,90 110,96" stroke="#2563EB" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.65"/>
+
+  <line x1="134" y1="108" x2="134" y2="90" stroke="#2563EB" stroke-width="1.5" stroke-dasharray="3,2" opacity="0.65"/>
+  <polyline points="130,96 134,90 138,96" stroke="#2563EB" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.65"/>
+
+  <!-- Server boxes -->
+  <rect x="68"  y="108" width="20" height="9" rx="1.5"
+        stroke="#2563EB" stroke-width="1" fill="rgba(37,99,235,0.14)" opacity="0.85"/>
+  <rect x="96"  y="108" width="20" height="9" rx="1.5"
+        stroke="#2563EB" stroke-width="1" fill="rgba(37,99,235,0.14)" opacity="0.85"/>
+  <rect x="124" y="108" width="20" height="9" rx="1.5"
+        stroke="#2563EB" stroke-width="1" fill="rgba(37,99,235,0.14)" opacity="0.85"/>
+
+  <!-- Status LEDs -->
+  <circle cx="73"  cy="112.5" r="1.2" fill="#4ade80" opacity="0.75"/>
+  <circle cx="101" cy="112.5" r="1.2" fill="#4ade80" opacity="0.75"/>
+  <circle cx="129" cy="112.5" r="1.2" fill="#4ade80" opacity="0.75"/>
+</svg>

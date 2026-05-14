@@ -1,0 +1,160 @@
+{% extends "base.html" %}
+{% block title %}{{ 'Modern IT Consulting — Oslo, Norway' if lang == 'en' else 'Moderne IT-rådgivning — Oslo, Norge' }}{% endblock %}
+
+{% block content %}
+
+<!-- ═══════════════════════════════ HERO ═══════════════════════════════════ -->
+<section class="hero" id="home">
+  <div class="hero-grid-bg" aria-hidden="true"></div>
+  <div class="hero-glow"    aria-hidden="true"></div>
+
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <div class="hero-badge">
+        <span class="hero-badge-dot" aria-hidden="true"></span>
+        {{ t.hero.badge }}
+      </div>
+
+      <h1>
+        {{ t.hero.h1a }} <span class="accent">{{ t.hero.h1b }}</span> {{ t.hero.h1c }}
+      </h1>
+
+      <p class="hero-sub">{{ t.hero.sub }}</p>
+
+      <div class="hero-tags" aria-label="Key services">
+        <span class="tag">Cloud Engineering</span>
+        <span class="tag">Data Solutions</span>
+        <span class="tag">Cybersecurity</span>
+        <span class="tag">Automation</span>
+        <span class="tag">AWS</span>
+        <span class="tag">Power Platform</span>
+      </div>
+
+      <div class="hero-btns">
+        <a href="{{ url_for('contact', lang=lang) }}" class="btn btn-primary">{{ t.hero.cta1 }}</a>
+        <a href="#services" class="btn btn-secondary">{{ t.hero.cta2 }}</a>
+      </div>
+    </div>
+
+    <!-- Decorative terminal card -->
+    <div class="hero-card" aria-hidden="true">
+      <div class="hero-card-bar">
+        <span></span><span></span><span></span>
+        <span class="hero-card-title">cryton — deploy.sh</span>
+      </div>
+      <div class="hero-card-body">
+        <p><span class="c-blue">$</span> terraform apply <span class="c-accent">--auto-approve</span></p>
+        <p>&nbsp;</p>
+        <p><span class="c-green">✓</span> Cloud infrastructure deployed</p>
+        <p><span class="c-green">✓</span> Security policies enforced</p>
+        <p><span class="c-green">✓</span> Data pipelines running</p>
+        <p><span class="c-green">✓</span> Monitoring active</p>
+        <p>&nbsp;</p>
+        <p><span class="c-blue">→</span> 0 alerts · all systems healthy</p>
+        <p class="blink"><span class="c-accent">▌</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ STATS BAR ══════════════════════════════ -->
+<div class="stats-bar" aria-label="Key statistics">
+  <div class="container stats-inner">
+    {% for stat in t.stats %}
+    <div class="stat">
+      <div class="stat-num">{{ stat.num }}</div>
+      <div class="stat-label">{{ stat.label }}</div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<!-- ═══════════════════════════════ SERVICES ═══════════════════════════════ -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">{{ t.services.label }}</div>
+      <h2 class="section-title">{{ t.services.title }}</h2>
+      <p class="section-sub">{{ t.services.sub }}</p>
+    </div>
+
+    <div class="services-grid">
+      {% for item in t.services.list %}
+      <article class="service-card">
+        <div class="service-illus" aria-hidden="true">
+          <img src="{{ url_for('static', filename='images/services/' + item.img) }}"
+               alt="" width="200" height="120" loading="lazy" />
+        </div>
+        <div class="service-icon" aria-hidden="true">
+          <i class="ti {{ item.icon }}"></i>
+        </div>
+        <h3 class="service-name">{{ item.name }}</h3>
+        <p class="service-desc">{{ item.desc }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ PROCESS ════════════════════════════════ -->
+<section class="section process-section" id="process">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">{{ t.process.label }}</div>
+      <h2 class="section-title">{{ t.process.title }}</h2>
+    </div>
+
+    <div class="process-grid">
+      {% for step in t.process.steps %}
+      <div class="step">
+        <div class="step-num">{{ step.num }}</div>
+        <h3 class="step-title">{{ step.title }}</h3>
+        <p class="step-desc">{{ step.desc }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ PORTFOLIO ══════════════════════════════ -->
+<section class="section" id="portfolio">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">{{ t.portfolio.label }}</div>
+      <h2 class="section-title">{{ t.portfolio.title }}</h2>
+      <p class="section-sub">{{ t.portfolio.sub }}</p>
+    </div>
+
+    <div class="portfolio-grid">
+      {% for item in t.portfolio.list %}
+      <article class="portfolio-card">
+        <a href="{{ url_for('case_study', slug=item.slug, lang=lang) }}" class="portfolio-card-link" aria-label="{{ item.name }}">
+          <div class="portfolio-preview">
+            <img src="{{ url_for('static', filename='images/portfolio/' + item.img) }}"
+                 alt="{{ item.name }}" width="400" height="240" loading="lazy" />
+            <span class="portfolio-tag">{{ item.tag }}</span>
+          </div>
+        </a>
+        <div class="portfolio-body">
+          <h3 class="portfolio-name">{{ item.name }}</h3>
+          <p class="portfolio-desc">{{ item.desc }}</p>
+          <a href="{{ url_for('case_study', slug=item.slug, lang=lang) }}" class="portfolio-link">View case study →</a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ CTA BAND ═══════════════════════════════ -->
+<section class="cta-band" id="cta">
+  <div class="container cta-inner">
+    <div class="cta-text">
+      <h2>{{ t.cta.h2 }}</h2>
+      <p>{{ t.cta.sub }}</p>
+    </div>
+    <a href="{{ url_for('contact', lang=lang) }}" class="btn btn-primary">{{ t.cta.btn }}</a>
+  </div>
+</section>
+
+{% endblock %}

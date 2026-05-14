@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120" fill="none">
+
+  <!-- ── Step boxes ── -->
+  <rect x="10"  y="32" width="46" height="32" rx="4"
+        stroke="#2563EB" stroke-width="1.5" fill="rgba(37,99,235,0.08)"/>
+  <rect x="77"  y="32" width="46" height="32" rx="4"
+        stroke="#2563EB" stroke-width="1.5" fill="rgba(37,99,235,0.14)"/>
+  <rect x="144" y="32" width="46" height="32" rx="4"
+        stroke="#2563EB" stroke-width="1.5" fill="rgba(37,99,235,0.08)"/>
+
+  <!-- ── Step labels ── -->
+  <text x="33"  y="51" text-anchor="middle"
+        font-family="'DM Mono',monospace" font-size="6.5" fill="#93B4F7" letter-spacing="0.8">TRIGGER</text>
+  <text x="100" y="51" text-anchor="middle"
+        font-family="'DM Mono',monospace" font-size="6.5" fill="#93B4F7" letter-spacing="0.8">PROCESS</text>
+  <text x="167" y="51" text-anchor="middle"
+        font-family="'DM Mono',monospace" font-size="6.5" fill="#93B4F7" letter-spacing="0.8">OUTPUT</text>
+
+  <!-- ── Step numbers ── -->
+  <text x="33"  y="60" text-anchor="middle"
+        font-family="'DM Mono',monospace" font-size="6" fill="#2563EB" opacity="0.45">01</text>
+  <text x="100" y="60" text-anchor="middle"
+        font-family="'DM Mono',monospace" font-size="6" fill="#2563EB" opacity="0.45">02</text>
+  <text x="167" y="60" text-anchor="middle"
+        font-family="'DM Mono',monospace" font-size="6" fill="#2563EB" opacity="0.45">03</text>
+
+  <!-- ── Status LEDs ── -->
+  <circle cx="18"  cy="38" r="2" fill="#4ade80" opacity="0.7"/>
+  <circle cx="85"  cy="38" r="2" fill="#4ade80" opacity="0.7"/>
+  <circle cx="152" cy="38" r="2" fill="#4ade80" opacity="0.7"/>
+
+  <!-- ── Forward arrows ── -->
+  <line x1="57"  y1="48" x2="75"  y2="48" stroke="#2563EB" stroke-width="1.5" opacity="0.75"/>
+  <polyline points="71,44 75,48 71,52" stroke="#2563EB" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.75"/>
+  <line x1="124" y1="48" x2="142" y2="48" stroke="#2563EB" stroke-width="1.5" opacity="0.75"/>
+  <polyline points="138,44 142,48 138,52" stroke="#2563EB" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.75"/>
+
+  <!-- ── Return loop (dashed arc below) ── -->
+  <path d="M167 64 L167 92 L33 92 L33 64"
+        stroke="#2563EB" stroke-width="1" stroke-dasharray="4,3"
+        stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.35"/>
+  <polyline points="29,68 33,64 37,68" stroke="#2563EB" stroke-width="1"
+            stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.35"/>
+
+  <!-- ── Output indicator boxes ── -->
+  <rect x="144" y="76" width="14" height="6" rx="1.5"
+        fill="rgba(37,99,235,0.2)" stroke="#2563EB" stroke-width="0.75" opacity="0.6"/>
+  <rect x="162" y="76" width="28" height="6" rx="1.5"
+        fill="rgba(37,99,235,0.12)" stroke="#2563EB" stroke-width="0.75" opacity="0.4"/>
+  <rect x="144" y="85" width="22" height="6" rx="1.5"
+        fill="rgba(37,99,235,0.16)" stroke="#2563EB" stroke-width="0.75" opacity="0.5"/>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120" fill="none">
+
+  <!-- ── Shield ── -->
+  <path d="M100 10 L148 28 L148 68 Q148 94 100 112 Q52 94 52 68 L52 28 Z"
+        stroke="#2563EB" stroke-width="1.5"
+        fill="rgba(37,99,235,0.07)" stroke-linejoin="round"/>
+  <!-- Inner shield glow layer -->
+  <path d="M100 18 L140 33 L140 66 Q140 88 100 104 Q60 88 60 66 L60 33 Z"
+        fill="rgba(37,99,235,0.05)"/>
+
+  <!-- ── Padlock body ── -->
+  <rect x="87" y="60" width="26" height="20" rx="3"
+        stroke="#2563EB" stroke-width="1.5" fill="rgba(37,99,235,0.2)"/>
+  <!-- Shackle -->
+  <path d="M91 60 L91 52 Q91 44 100 44 Q109 44 109 52 L109 60"
+        stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+  <!-- Keyhole circle -->
+  <circle cx="100" cy="70" r="3.5" fill="#2563EB" opacity="0.65"/>
+  <!-- Keyhole slot -->
+  <line x1="100" y1="73.5" x2="100" y2="77.5"
+        stroke="#2563EB" stroke-width="2" stroke-linecap="round" opacity="0.65"/>
+
+  <!-- ── Circuit lines radiating from shield edges ── -->
+  <!-- Top-right -->
+  <line x1="138" y1="24" x2="158" y2="12" stroke="#2563EB" stroke-width="1" opacity="0.3"/>
+  <line x1="158" y1="12" x2="178" y2="12" stroke="#2563EB" stroke-width="1" opacity="0.3"/>
+  <circle cx="178" cy="12" r="2" fill="#2563EB" opacity="0.3"/>
+  <!-- Right mid -->
+  <line x1="148" y1="55" x2="172" y2="55" stroke="#2563EB" stroke-width="1" opacity="0.3"/>
+  <line x1="172" y1="55" x2="172" y2="40" stroke="#2563EB" stroke-width="1" opacity="0.3"/>
+  <circle cx="172" cy="40" r="2" fill="#2563EB" opacity="0.3"/>
+  <!-- Top-left -->
+  <line x1="62"  y1="24" x2="42"  y2="12" stroke="#2563EB" stroke-width="1" opacity="0.3"/>
+  <line x1="42"  y1="12" x2="22"  y2="12" stroke="#2563EB" stroke-width="1" opacity="0.3"/>
+  <circle cx="22"  cy="12" r="2" fill="#2563EB" opacity="0.3"/>
+  <!-- Left mid -->
+  <line x1="52"  y1="55" x2="28"  y2="55" stroke="#2563EB" stroke-width="1" opacity="0.3"/>
+  <line x1="28"  y1="55" x2="28"  y2="40" stroke="#2563EB" stroke-width="1" opacity="0.3"/>
+  <circle cx="28"  cy="40" r="2" fill="#2563EB" opacity="0.3"/>
+
+  <!-- Check badge bottom-right of shield -->
+  <circle cx="138" cy="82" r="10" fill="rgba(74,222,128,0.12)" stroke="#4ade80" stroke-width="1.2" opacity="0.75"/>
+  <polyline points="133,82 137,86 144,78" stroke="#4ade80" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round" opacity="0.75"/>
+</svg>

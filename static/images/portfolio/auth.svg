@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" fill="none">
+  <rect width="400" height="240" fill="rgba(12,21,37,0.6)"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="400" height="32" rx="0"
+        fill="rgba(37,99,235,0.12)" stroke="#2563EB" stroke-width="0.5" opacity="0.7"/>
+  <text x="16" y="21" font-family="'DM Mono',monospace" font-size="8.5"
+        fill="#93B4F7" font-weight="600">Zero-Trust Auth — OAuth 2.0 + OIDC</text>
+  <rect x="324" y="9" width="62" height="14" rx="7"
+        fill="rgba(74,222,128,0.12)" stroke="#4ade80" stroke-width="0.75"/>
+  <text x="355" y="20" text-anchor="middle" font-family="monospace" font-size="6.5" fill="#4ade80">● Active</text>
+
+  <!-- ── Client box ── -->
+  <rect x="20" y="66" width="76" height="90" rx="6"
+        stroke="#2563EB" stroke-width="1.5" fill="rgba(37,99,235,0.09)"/>
+  <!-- User avatar -->
+  <circle cx="58" cy="98" r="16" stroke="#2563EB" stroke-width="1.5" fill="rgba(37,99,235,0.14)"/>
+  <circle cx="58" cy="95" r="6.5" fill="#2563EB" opacity="0.55"/>
+  <path d="M42 116 Q42 108 58 108 Q74 108 74 116"
+        stroke="#2563EB" stroke-width="1.5" fill="rgba(37,99,235,0.3)" stroke-linecap="round"/>
+  <text x="58" y="148" text-anchor="middle"
+        font-family="'DM Mono',monospace" font-size="7" fill="#93B4F7" opacity="0.7">CLIENT</text>
+
+  <!-- JWT token flying toward auth -->
+  <rect x="100" y="98" width="44" height="14" rx="2"
+        fill="rgba(37,99,235,0.22)" stroke="#2563EB" stroke-width="0.75"/>
+  <text x="122" y="108" text-anchor="middle"
+        font-family="monospace" font-size="6" fill="#93B4F7">JWT token</text>
+
+  <!-- Arrow client → auth -->
+  <line x1="98"  y1="111" x2="146" y2="111" stroke="#2563EB" stroke-width="1.5" opacity="0.65"/>
+  <polyline points="142,107 146,111 142,115" stroke="#2563EB" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.65"/>
+
+  <!-- ── Auth / IdP box ── -->
+  <rect x="148" y="56" width="106" height="110" rx="6"
+        stroke="#2563EB" stroke-width="1.5" fill="rgba(37,99,235,0.14)"/>
+  <!-- Shield -->
+  <path d="M201 78 L220 85 L220 107 Q220 119 201 126 Q182 119 182 107 L182 85 Z"
+        stroke="#60a5fa" stroke-width="1.5" fill="rgba(96,165,250,0.12)"/>
+  <!-- Lock body -->
+  <rect x="195" y="104" width="12" height="10" rx="2" fill="#60a5fa" opacity="0.7"/>
+  <!-- Lock shackle -->
+  <path d="M197 104 L197 99 Q197 96 201 96 Q205 96 205 99 L205 104"
+        stroke="#60a5fa" stroke-width="1.25" fill="none"/>
+  <!-- Keyhole -->
+  <circle cx="201" cy="109" r="2" fill="rgba(12,21,37,0.6)"/>
+  <text x="201" y="143" text-anchor="middle"
+        font-family="'DM Mono',monospace" font-size="7" fill="#93B4F7" opacity="0.8">AUTH SERVER</text>
+  <text x="201" y="155" text-anchor="middle"
+        font-family="monospace" font-size="6" fill="#2563EB" opacity="0.55">Keycloak / IdP</text>
+
+  <!-- Arrows auth → services (fan out) -->
+  <line x1="256" y1="91"  x2="280" y2="80"  stroke="#2563EB" stroke-width="1.5" opacity="0.6"/>
+  <line x1="256" y1="111" x2="280" y2="111" stroke="#2563EB" stroke-width="1.5" opacity="0.6"/>
+  <line x1="256" y1="131" x2="280" y2="142" stroke="#2563EB" stroke-width="1.5" opacity="0.6"/>
+  <polyline points="276,76 280,80 276,84"    stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.6"/>
+  <polyline points="276,107 280,111 276,115" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.6"/>
+  <polyline points="276,138 280,142 276,146" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.6"/>
+
+  <!-- ── Service boxes ── -->
+  <rect x="282" y="62" width="100" height="26" rx="3"
+        stroke="#2563EB" stroke-width="1" fill="rgba(37,99,235,0.11)"/>
+  <text x="332" y="78" text-anchor="middle" font-family="monospace" font-size="7.5" fill="#93B4F7">Platform A</text>
+  <text x="375" y="75" text-anchor="end" font-family="monospace" font-size="5.5" fill="#4ade80" opacity="0.8">RBAC ✓</text>
+
+  <rect x="282" y="98" width="100" height="26" rx="3"
+        stroke="#2563EB" stroke-width="1" fill="rgba(37,99,235,0.11)"/>
+  <text x="332" y="114" text-anchor="middle" font-family="monospace" font-size="7.5" fill="#93B4F7">Platform B</text>
+  <text x="375" y="111" text-anchor="end" font-family="monospace" font-size="5.5" fill="#4ade80" opacity="0.8">RBAC ✓</text>
+
+  <rect x="282" y="134" width="100" height="26" rx="3"
+        stroke="#2563EB" stroke-width="1" fill="rgba(37,99,235,0.11)"/>
+  <text x="332" y="150" text-anchor="middle" font-family="monospace" font-size="7.5" fill="#93B4F7">Platform C</text>
+  <text x="375" y="147" text-anchor="end" font-family="monospace" font-size="5.5" fill="#4ade80" opacity="0.8">RBAC ✓</text>
+
+  <!-- Bottom stats bar -->
+  <rect x="14" y="208" width="372" height="22" rx="3"
+        fill="rgba(37,99,235,0.06)" stroke="#2563EB" stroke-width="0.5" opacity="0.55"/>
+  <text x="80"  y="223" text-anchor="middle" font-family="monospace" font-size="7" fill="#93B4F7" opacity="0.7">3 platforms secured</text>
+  <text x="200" y="223" text-anchor="middle" font-family="monospace" font-size="7" fill="#93B4F7" opacity="0.7">OAuth 2.0 + OIDC + RBAC</text>
+  <text x="328" y="223" text-anchor="middle" font-family="monospace" font-size="7" fill="#4ade80" opacity="0.8">Zero trust enforced</text>
+</svg>

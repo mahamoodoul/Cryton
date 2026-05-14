@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120" fill="none">
+
+  <!-- ── Source cylinder ── -->
+  <rect x="16" y="30" width="44" height="28" fill="rgba(37,99,235,0.06)"/>
+  <line x1="16" y1="30" x2="16" y2="58" stroke="#2563EB" stroke-width="1.5"/>
+  <line x1="60" y1="30" x2="60" y2="58" stroke="#2563EB" stroke-width="1.5"/>
+  <path d="M16 58 Q38 66 60 58" stroke="#2563EB" stroke-width="1.5" fill="none"/>
+  <ellipse cx="38" cy="30" rx="22" ry="7"
+           stroke="#2563EB" stroke-width="1.5" fill="rgba(37,99,235,0.12)"/>
+  <text x="38" y="46" text-anchor="middle"
+        font-family="'DM Mono',monospace" font-size="6.5" fill="#93B4F7" letter-spacing="0.8">SOURCE</text>
+
+  <!-- ── Arrow → ETL ── -->
+  <line x1="63" y1="44" x2="78" y2="44" stroke="#2563EB" stroke-width="1.5" opacity="0.75"/>
+  <polyline points="74,40 78,44 74,48" stroke="#2563EB" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.75"/>
+
+  <!-- ── ETL transform box ── -->
+  <rect x="81" y="32" width="38" height="24" rx="3"
+        stroke="#2563EB" stroke-width="1.5" fill="rgba(37,99,235,0.16)"/>
+  <text x="100" y="46" text-anchor="middle"
+        font-family="'DM Mono',monospace" font-size="7.5" fill="#93B4F7" letter-spacing="1">ETL</text>
+
+  <!-- ── Arrow → Warehouse ── -->
+  <line x1="122" y1="44" x2="138" y2="44" stroke="#2563EB" stroke-width="1.5" opacity="0.75"/>
+  <polyline points="134,40 138,44 134,48" stroke="#2563EB" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.75"/>
+
+  <!-- ── Warehouse cylinder ── -->
+  <rect x="140" y="30" width="44" height="28" fill="rgba(37,99,235,0.06)"/>
+  <line x1="140" y1="30" x2="140" y2="58" stroke="#2563EB" stroke-width="1.5"/>
+  <line x1="184" y1="30" x2="184" y2="58" stroke="#2563EB" stroke-width="1.5"/>
+  <path d="M140 58 Q162 66 184 58" stroke="#2563EB" stroke-width="1.5" fill="none"/>
+  <ellipse cx="162" cy="30" rx="22" ry="7"
+           stroke="#2563EB" stroke-width="1.5" fill="rgba(37,99,235,0.12)"/>
+  <text x="162" y="46" text-anchor="middle"
+        font-family="'DM Mono',monospace" font-size="5.5" fill="#93B4F7" letter-spacing="0.5">WAREHOUSE</text>
+
+  <!-- ── Sparkline chart (output / dashboard) ── -->
+  <!-- Axes -->
+  <line x1="26" y1="112" x2="174" y2="112" stroke="#2563EB" stroke-width="0.75" opacity="0.2"/>
+  <line x1="26" y1="112" x2="26"  y2="80"  stroke="#2563EB" stroke-width="0.75" opacity="0.2"/>
+  <!-- Chart area fill -->
+  <path d="M26 108 L52 98 L78 103 L104 90 L130 93 L156 81 L174 76 L174 112 Z"
+        fill="rgba(37,99,235,0.07)"/>
+  <!-- Chart line -->
+  <polyline points="26,108 52,98 78,103 104,90 130,93 156,81 174,76"
+            stroke="#60a5fa" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.8"/>
+  <!-- Data dots -->
+  <circle cx="26"  cy="108" r="2" fill="#60a5fa" opacity="0.8"/>
+  <circle cx="78"  cy="103" r="2" fill="#60a5fa" opacity="0.8"/>
+  <circle cx="130" cy="93"  r="2" fill="#60a5fa" opacity="0.8"/>
+  <circle cx="174" cy="76"  r="2" fill="#60a5fa" opacity="0.8"/>
+</svg>

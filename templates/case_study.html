@@ -1,0 +1,141 @@
+{% extends "base.html" %}
+{% block title %}{{ study.name }} — Case Study{% endblock %}
+{% block meta_desc %}{{ study.subtitle }}{% endblock %}
+
+{% block content %}
+
+<!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+<div class="cs-breadcrumb">
+  <div class="container">
+    <a href="{{ url_for('index', lang=lang) }}#portfolio" class="cs-back">
+      <i class="ti ti-arrow-left"></i>
+      {{ t.case_study.back }}
+    </a>
+  </div>
+</div>
+
+<!-- ── Hero ─────────────────────────────────────────────────────── -->
+<section class="cs-hero">
+  <div class="cs-hero-glow" aria-hidden="true"></div>
+  <div class="container cs-hero-inner">
+    <div class="cs-hero-meta">
+      <span class="cs-category-badge">{{ study.tag }}</span>
+    </div>
+    <h1 class="cs-title">{{ study.name }}</h1>
+    <p class="cs-subtitle">{{ study.subtitle }}</p>
+  </div>
+</section>
+
+<!-- ── Metrics bar ───────────────────────────────────────────────── -->
+<div class="cs-metrics-bar">
+  <div class="container cs-metrics-inner">
+    {% for m in study.metrics %}
+    <div class="cs-metric">
+      <div class="cs-metric-num">{{ m.num }}</div>
+      <div class="cs-metric-label">{{ m.label }}</div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<!-- ── Project image ─────────────────────────────────────────────── -->
+<div class="cs-cover-wrap">
+  <div class="container">
+    <div class="cs-cover">
+      <img src="{{ url_for('static', filename='images/portfolio/' + study.img) }}"
+           alt="{{ study.name }}" width="1100" height="480" />
+    </div>
+  </div>
+</div>
+
+<!-- ── Body ─────────────────────────────────────────────────────── -->
+<div class="container cs-body">
+
+  <!-- Main content -->
+  <div class="cs-main">
+
+    <!-- Overview -->
+    <div class="cs-overview">
+      {{ study.overview }}
+    </div>
+
+    <!-- Challenge -->
+    <div class="cs-section">
+      <div class="cs-section-label">{{ t.case_study.challenge }}</div>
+      <p class="cs-section-body">{{ study.challenge }}</p>
+    </div>
+
+    <!-- Solution -->
+    <div class="cs-section">
+      <div class="cs-section-label">{{ t.case_study.solution }}</div>
+      <p class="cs-section-body">{{ study.solution }}</p>
+    </div>
+
+    <!-- Outcome -->
+    <div class="cs-section cs-outcome-section">
+      <div class="cs-section-label">{{ t.case_study.outcome }}</div>
+      <p class="cs-section-body">{{ study.outcome }}</p>
+    </div>
+
+  </div>
+
+  <!-- Sidebar -->
+  <aside class="cs-sidebar">
+
+    <!-- Tech stack -->
+    <div class="cs-sidebar-card">
+      <div class="cs-sidebar-label">
+        <i class="ti ti-stack-2"></i>
+        {{ t.case_study.tech_label }}
+      </div>
+      <div class="cs-tech-list">
+        {% for tech in study.tech %}
+        <span class="cs-tech-tag">{{ tech }}</span>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Timeline -->
+    <div class="cs-sidebar-card">
+      <div class="cs-sidebar-label">
+        <i class="ti ti-timeline"></i>
+        {{ t.case_study.timeline_label }}
+      </div>
+      <div class="cs-timeline">
+        {% for step in study.timeline %}
+        <div class="cs-timeline-step">
+          <div class="cs-timeline-dot" aria-hidden="true"></div>
+          <div class="cs-timeline-content">
+            <div class="cs-timeline-phase">{{ step.phase }}</div>
+            <div class="cs-timeline-title">{{ step.title }}</div>
+            <p class="cs-timeline-desc">{{ step.desc }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Contact sidebar CTA -->
+    <div class="cs-sidebar-cta">
+      <div class="cs-sidebar-cta-title">{{ t.case_study.cta_label }}</div>
+      <p class="cs-sidebar-cta-sub">{{ t.case_study.cta_sub }}</p>
+      <a href="{{ url_for('contact', lang=lang) }}" class="btn btn-primary btn-full">
+        {{ t.case_study.cta_btn }}
+      </a>
+    </div>
+
+  </aside>
+</div>
+
+<!-- ── Related / bottom CTA ──────────────────────────────────────── -->
+<section class="cta-band" id="cta" style="margin-top: 1rem;">
+  <div class="container cta-inner">
+    <div class="cta-text">
+      <h2>{{ t.cta.h2 }}</h2>
+      <p>{{ t.cta.sub }}</p>
+    </div>
+    <a href="{{ url_for('contact', lang=lang) }}" class="btn btn-primary">{{ t.cta.btn }}</a>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+{% block title %}{{ 'Contact' if lang == 'en' else 'Kontakt' }}{% endblock %}
+
+{% block content %}
+
+<section class="page-hero">
+  <div class="container">
+    <div class="section-label">{{ t.contact.label }}</div>
+    <h1 class="page-hero-title">{{ t.contact.title }}</h1>
+    <p class="page-hero-sub">{{ t.contact.sub }}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container contact-grid">
+
+    <!-- Contact form -->
+    <div class="contact-form-wrap">
+      <div id="form-success" class="form-success hidden">
+        <i class="ti ti-circle-check"></i> {{ t.contact.success }}
+      </div>
+      <div id="form-error" class="form-error hidden">
+        <i class="ti ti-alert-circle"></i> {{ t.contact.error }}
+      </div>
+
+      <form id="contact-form" novalidate>
+        <input type="hidden" name="lang" value="{{ lang }}" />
+
+        <div class="form-row two-col">
+          <div class="form-group">
+            <label for="name">{{ t.contact.name }} <span aria-hidden="true">*</span></label>
+            <input type="text" id="name" name="name" required autocomplete="name" />
+          </div>
+          <div class="form-group">
+            <label for="email">{{ t.contact.email }} <span aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email" />
+          </div>
+        </div>
+
+        <div class="form-row two-col">
+          <div class="form-group">
+            <label for="company">{{ t.contact.company }}</label>
+            <input type="text" id="company" name="company" autocomplete="organization" />
+          </div>
+          <div class="form-group">
+            <label for="service">{{ t.contact.service }}</label>
+            <select id="service" name="service">
+              <option value="">—</option>
+              {% for opt in t.contact.service_opts %}
+              <option value="{{ opt }}">{{ opt }}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="message">{{ t.contact.message }} <span aria-hidden="true">*</span></label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+          {{ t.contact.submit }}
+          <span class="btn-spinner hidden" id="btn-spinner">
+            <i class="ti ti-loader-2"></i>
+          </span>
+        </button>
+      </form>
+    </div>
+
+    <!-- Contact info sidebar -->
+    <div class="contact-info">
+      <div class="contact-info-card">
+        <div class="contact-info-item">
+          <i class="ti ti-mail" aria-hidden="true"></i>
+          <div>
+            <div class="info-label">Email</div>
+            <a href="mailto:hello@cryton.no">hello@cryton.no</a>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <i class="ti ti-brand-linkedin" aria-hidden="true"></i>
+          <div>
+            <div class="info-label">LinkedIn</div>
+            <a href="https://linkedin.com/company/cryton" target="_blank" rel="noopener">linkedin.com/company/cryton</a>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <i class="ti ti-map-pin" aria-hidden="true"></i>
+          <div>
+            <div class="info-label">{{ 'Location' if lang == 'en' else 'Lokasjon' }}</div>
+            <span>Oslo, Norway</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="response-time">
+        <i class="ti ti-clock" aria-hidden="true"></i>
+        {{ 'We typically respond within 1 business day.' if lang == 'en' else 'Vi svarer vanligvis innen 1 virkedag.' }}
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/contact.js') }}"></script>
+{% endblock %}

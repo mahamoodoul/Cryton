@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" fill="none">
+  <rect width="400" height="240" fill="rgba(12,21,37,0.6)"/>
+
+  <!-- Top CDN bar -->
+  <rect x="14" y="12" width="372" height="26" rx="3"
+        stroke="#2563EB" stroke-width="0.75" fill="rgba(37,99,235,0.08)" opacity="0.8"/>
+  <text x="200" y="29" text-anchor="middle"
+        font-family="'DM Mono',monospace" font-size="8" fill="#93B4F7" letter-spacing="1" opacity="0.85">
+    Route 53  ·  CloudFront CDN  ·  Global Load Balancer
+  </text>
+
+  <!-- Region 1 -->
+  <rect x="14" y="52" width="176" height="144" rx="5"
+        stroke="#2563EB" stroke-width="1" stroke-dasharray="6,3"
+        fill="rgba(37,99,235,0.04)"/>
+  <text x="26" y="68" font-family="'DM Mono',monospace" font-size="7.5"
+        fill="#2563EB" opacity="0.75" letter-spacing="0.5">us-east-1  (primary)</text>
+
+  <!-- VPC inner box -->
+  <rect x="24" y="76" width="156" height="72" rx="3"
+        stroke="#2563EB" stroke-width="0.75" stroke-dasharray="3,2"
+        fill="rgba(37,99,235,0.03)" opacity="0.6"/>
+  <text x="30" y="87" font-family="monospace" font-size="6" fill="#2563EB" opacity="0.45">VPC</text>
+
+  <!-- EC2 boxes -->
+  <rect x="32"  y="92" width="38" height="24" rx="2"
+        stroke="#2563EB" stroke-width="1" fill="rgba(37,99,235,0.14)"/>
+  <text x="51" y="107" text-anchor="middle" font-family="monospace" font-size="7" fill="#93B4F7">EC2</text>
+  <rect x="78"  y="92" width="38" height="24" rx="2"
+        stroke="#2563EB" stroke-width="1" fill="rgba(37,99,235,0.14)"/>
+  <text x="97" y="107" text-anchor="middle" font-family="monospace" font-size="7" fill="#93B4F7">EC2</text>
+  <rect x="124" y="92" width="46" height="24" rx="2"
+        stroke="#2563EB" stroke-width="1" fill="rgba(37,99,235,0.09)"/>
+  <text x="147" y="107" text-anchor="middle" font-family="monospace" font-size="7" fill="#93B4F7">EC2</text>
+
+  <!-- RDS primary -->
+  <rect x="32" y="124" width="62" height="20" rx="2"
+        stroke="#60a5fa" stroke-width="1" fill="rgba(96,165,250,0.1)"/>
+  <text x="63" y="137" text-anchor="middle" font-family="monospace" font-size="6.5" fill="#60a5fa">RDS Primary</text>
+
+  <!-- Health indicator R1 -->
+  <circle cx="24" cy="186" r="3.5" fill="#4ade80" opacity="0.8"/>
+  <text x="34" y="190" font-family="monospace" font-size="6.5" fill="#4ade80" opacity="0.8">Healthy · 3 instances</text>
+
+  <!-- Replication arrows -->
+  <line x1="192" y1="120" x2="210" y2="120" stroke="#2563EB" stroke-width="1.5" opacity="0.55"/>
+  <polyline points="206,116 210,120 206,124" stroke="#2563EB" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.55"/>
+  <line x1="208" y1="132" x2="190" y2="132" stroke="#2563EB" stroke-width="1"
+        stroke-dasharray="3,2" opacity="0.35"/>
+  <polyline points="194,128 190,132 194,136" stroke="#2563EB" stroke-width="1"
+            stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.35"/>
+  <text x="200" y="145" text-anchor="middle" font-family="monospace" font-size="6"
+        fill="#2563EB" opacity="0.45">SYNC</text>
+
+  <!-- Region 2 -->
+  <rect x="212" y="52" width="176" height="144" rx="5"
+        stroke="#2563EB" stroke-width="1" stroke-dasharray="6,3"
+        fill="rgba(37,99,235,0.03)"/>
+  <text x="224" y="68" font-family="'DM Mono',monospace" font-size="7.5"
+        fill="#2563EB" opacity="0.5" letter-spacing="0.5">eu-west-1  (replica)</text>
+
+  <!-- VPC inner box R2 -->
+  <rect x="222" y="76" width="156" height="72" rx="3"
+        stroke="#2563EB" stroke-width="0.75" stroke-dasharray="3,2"
+        fill="rgba(37,99,235,0.02)" opacity="0.5"/>
+  <text x="228" y="87" font-family="monospace" font-size="6" fill="#2563EB" opacity="0.35">VPC</text>
+
+  <!-- EC2 boxes R2 -->
+  <rect x="230" y="92" width="38" height="24" rx="2"
+        stroke="#2563EB" stroke-width="1" fill="rgba(37,99,235,0.10)"/>
+  <text x="249" y="107" text-anchor="middle" font-family="monospace" font-size="7" fill="#93B4F7">EC2</text>
+  <rect x="276" y="92" width="38" height="24" rx="2"
+        stroke="#2563EB" stroke-width="1" fill="rgba(37,99,235,0.10)"/>
+  <text x="295" y="107" text-anchor="middle" font-family="monospace" font-size="7" fill="#93B4F7">EC2</text>
+
+  <!-- RDS replica -->
+  <rect x="230" y="124" width="62" height="20" rx="2"
+        stroke="#60a5fa" stroke-width="1" fill="rgba(96,165,250,0.07)" opacity="0.7"/>
+  <text x="261" y="137" text-anchor="middle" font-family="monospace" font-size="6.5" fill="#60a5fa" opacity="0.7">RDS Replica</text>
+
+  <!-- Health indicator R2 -->
+  <circle cx="222" cy="186" r="3.5" fill="#4ade80" opacity="0.65"/>
+  <text x="232" y="190" font-family="monospace" font-size="6.5" fill="#4ade80" opacity="0.65">Healthy · 2 instances</text>
+
+  <!-- Bottom metrics bar -->
+  <rect x="14" y="208" width="372" height="22" rx="3"
+        fill="rgba(37,99,235,0.06)" stroke="#2563EB" stroke-width="0.5" opacity="0.55"/>
+  <text x="80"  y="223" text-anchor="middle" font-family="monospace" font-size="7" fill="#93B4F7" opacity="0.7">99.99% uptime</text>
+  <text x="200" y="223" text-anchor="middle" font-family="monospace" font-size="7" fill="#93B4F7" opacity="0.7">Zero-downtime migration</text>
+  <text x="328" y="223" text-anchor="middle" font-family="monospace" font-size="7" fill="#4ade80" opacity="0.8">−30% infra cost</text>
+</svg>

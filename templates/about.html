@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block title %}{{ 'About Us' if lang == 'en' else 'Om oss' }}{% endblock %}
+
+{% block content %}
+
+<section class="page-hero">
+  <div class="container">
+    <div class="section-label">{{ t.about.label }}</div>
+    <h1 class="page-hero-title">{{ t.about.title }}</h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container about-grid">
+    <div class="about-body">
+      <p class="about-lead">{{ t.about.body }}</p>
+
+      <div class="about-pillars">
+        <div class="pillar">
+          <div class="pillar-icon"><i class="ti ti-target"></i></div>
+          <div>
+            <h3>{{ t.about.mission_title }}</h3>
+            <p>{{ t.about.mission }}</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-icon"><i class="ti ti-eye"></i></div>
+          <div>
+            <h3>{{ t.about.vision_title }}</h3>
+            <p>{{ t.about.vision }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-sidebar">
+      <div class="about-stat-card">
+        <div class="about-stat"><span>5+</span><small>{{ 'Service areas' if lang == 'en' else 'Tjenesteområder' }}</small></div>
+        <div class="about-stat"><span>AWS</span><small>{{ 'Certified cloud' if lang == 'en' else 'Sertifisert sky' }}</small></div>
+        <div class="about-stat"><span>Oslo</span><small>{{ 'Headquarters' if lang == 'en' else 'Hovedkontor' }}</small></div>
+      </div>
+
+      <div class="tech-stack">
+        <div class="tech-stack-label">{{ 'Tech stack' if lang == 'en' else 'Teknologi' }}</div>
+        <div class="tech-tags">
+          <span>AWS</span><span>Databricks</span><span>Python</span>
+          <span>Power Apps</span><span>Azure</span><span>Docker</span>
+          <span>Terraform</span><span>PostgreSQL</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

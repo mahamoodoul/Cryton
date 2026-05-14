@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cryton — {% block title %}{% endblock %}</title>
+  <meta name="description" content="{% block meta_desc %}Cryton delivers modern IT consulting — cloud, data, cybersecurity, automation.{% endblock %}" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Tabler Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+
+  {% block head %}{% endblock %}
+</head>
+<body>
+
+<!-- ── Navigation ─────────────────────────────────────────────── -->
+<header class="site-header">
+  <nav class="nav container">
+    <a href="{{ url_for('index', lang=lang) }}" class="logo">
+      <img src="{{ url_for('static', filename='images/logo-mark.svg') }}" class="logo-mark" alt="" aria-hidden="true" />
+      Cry<span>ton</span>
+    </a>
+
+    <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <i class="ti ti-menu-2"></i>
+    </button>
+
+    <ul class="nav-links" id="nav-links" role="list">
+      <li><a href="{{ url_for('index', lang=lang) }}#services">{{ t.nav.services }}</a></li>
+      <li><a href="{{ url_for('about', lang=lang) }}">{{ t.nav.about }}</a></li>
+      <li><a href="{{ url_for('index', lang=lang) }}#portfolio">{{ t.nav.portfolio }}</a></li>
+      <li><a href="{{ url_for('contact', lang=lang) }}">{{ t.nav.contact }}</a></li>
+
+      <!-- Language switcher -->
+      <li class="lang-switcher">
+        <button class="lang-btn {% if lang == 'en' %}active{% endif %}"
+                onclick="switchLang('en')">EN</button>
+        <span class="lang-sep">|</span>
+        <button class="lang-btn {% if lang == 'no' %}active{% endif %}"
+                onclick="switchLang('no')">NO</button>
+      </li>
+
+      <li>
+        <a href="{{ url_for('contact', lang=lang) }}" class="btn-nav-cta">{{ t.nav.book }}</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ── Page content ───────────────────────────────────────────── -->
+<main>
+  {% block content %}{% endblock %}
+</main>
+
+<!-- ── Footer ─────────────────────────────────────────────────── -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a href="{{ url_for('index', lang=lang) }}" class="logo">
+        <img src="{{ url_for('static', filename='images/logo-mark.svg') }}" class="logo-mark" alt="" aria-hidden="true" />
+        Cry<span>ton</span>
+      </a>
+      <p class="footer-tagline">{{ t.footer.tagline }}</p>
+    </div>
+
+    <div class="footer-links">
+      <a href="{{ url_for('index', lang=lang) }}#services">{{ t.nav.services }}</a>
+      <a href="{{ url_for('about', lang=lang) }}">{{ t.nav.about }}</a>
+      <a href="{{ url_for('contact', lang=lang) }}">{{ t.nav.contact }}</a>
+    </div>
+
+    <div class="footer-social">
+      <a href="https://linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener">
+        <i class="ti ti-brand-linkedin"></i>
+      </a>
+      <a href="mailto:hello@cryton.no" aria-label="Email">
+        <i class="ti ti-mail"></i>
+      </a>
+    </div>
+  </div>
+  <div class="footer-copy container">{{ t.footer.copy }} · cryton.no</div>
+</footer>
+
+<!-- ── Scripts ────────────────────────────────────────────────── -->
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+{% block scripts %}{% endblock %}
+</body>
+</html>

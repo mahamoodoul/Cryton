@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120" fill="none">
+
+  <!-- ── Opening bracket < ── -->
+  <path d="M60 18 L42 42 L28 58 L42 74 L60 98"
+        stroke="#2563EB" stroke-width="2.5"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- ── Closing bracket > ── -->
+  <path d="M140 18 L158 42 L172 58 L158 74 L140 98"
+        stroke="#2563EB" stroke-width="2.5"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- ── Forward slash / ── -->
+  <line x1="118" y1="22" x2="82" y2="94"
+        stroke="#2563EB" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+
+  <!-- ── Code line blocks (representing syntax) ── -->
+  <rect x="68" y="42" width="40" height="4.5" rx="2" fill="#2563EB" opacity="0.22"/>
+  <rect x="68" y="52" width="60" height="4.5" rx="2" fill="#2563EB" opacity="0.15"/>
+  <rect x="68" y="62" width="30" height="4.5" rx="2" fill="#2563EB" opacity="0.22"/>
+  <rect x="68" y="72" width="50" height="4.5" rx="2" fill="#2563EB" opacity="0.13"/>
+
+  <!-- ── Corner nodes on brackets ── -->
+  <circle cx="42" cy="42" r="2.5" fill="#2563EB" opacity="0.4"/>
+  <circle cx="28" cy="58" r="3"   fill="#2563EB" opacity="0.65"/>
+  <circle cx="42" cy="74" r="2.5" fill="#2563EB" opacity="0.4"/>
+  <circle cx="158" cy="42" r="2.5" fill="#2563EB" opacity="0.4"/>
+  <circle cx="172" cy="58" r="3"   fill="#2563EB" opacity="0.65"/>
+  <circle cx="158" cy="74" r="2.5" fill="#2563EB" opacity="0.4"/>
+
+  <!-- ── Terminal prompt at bottom ── -->
+  <text x="100" y="112" text-anchor="middle"
+        font-family="'DM Mono',monospace" font-size="8" fill="#2563EB" opacity="0.3" letter-spacing="2">REST · API · WEB</text>
+</svg>
