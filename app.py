@@ -1,23 +1,24 @@
 from flask import Flask, render_template, request, jsonify, redirect, url_for, abort
-from flask_mail import Mail, Message
 from dotenv import load_dotenv
 from datetime import datetime
 import os
+import resend
 
 load_dotenv()
 
 app = Flask(__name__)
 
-# ── Mail config (set via env vars in production) ──────────────────────────────
-app.config['MAIL_SERVER']   = os.getenv('MAIL_SERVER', 'smtp.gmail.com')
-app.config['MAIL_PORT']     = int(os.getenv('MAIL_PORT', 587))
-app.config['MAIL_USE_TLS']  = True
-app.config['MAIL_USERNAME'] = os.getenv('MAIL_USERNAME', '')
-app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD', '')
-app.config['MAIL_DEFAULT_SENDER'] = os.getenv('MAIL_FROM', 'onboarding@resend.dev')
-app.config['SECRET_KEY']    = os.getenv('SECRET_KEY', 'dev-secret-change-in-production')
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'dev-secret-change-in-production')
 
-mail = Mail(app)
+def send_email(to, reply_to, subject, html_body):
+    resend.api_key = os.getenv('RESEND_API_KEY') or os.getenv('MAIL_PASSWORD', '')
+    return resend.Emails.send({
+        'from':     os.getenv('MAIL_FROM', 'onboarding@resend.dev'),
+        'to':       [to],
+        'reply_to': reply_to,
+        'subject':  subject,
+        'html':     html_body,
+    })
 
 # ── i18n strings ──────────────────────────────────────────────────────────────
 TRANSLATIONS = {
@@ -526,13 +527,12 @@ def api_contact():
 </body>
 </html>"""
 
-        msg = Message(
-            subject=f'[Cryton] New inquiry from {name}',
-            recipients=[os.getenv('CONTACT_RECIPIENT', app.config['MAIL_USERNAME'])],
+        send_email(
+            to=os.getenv('CONTACT_RECIPIENT', ''),
             reply_to=email,
-            html=html_body,
+            subject=f'[Cryton] New inquiry from {name}',
+            html_body=html_body,
         )
-        mail.send(msg)
         return jsonify({'ok': True})
     except Exception as e:
         app.logger.error(f'Mail error [{type(e).__name__}]: {e}')
