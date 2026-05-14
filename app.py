@@ -15,7 +15,7 @@ def send_email(to, reply_to, subject, html_body):
     return resend.Emails.send({
         'from':     os.getenv('MAIL_FROM', 'onboarding@resend.dev'),
         'to':       [to],
-        'reply_to': reply_to,
+        'reply_to': [reply_to],
         'subject':  subject,
         'html':     html_body,
     })
